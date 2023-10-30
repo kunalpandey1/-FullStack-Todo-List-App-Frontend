@@ -24,6 +24,10 @@ function App() {
     settodoID(_id);
   };
 
+  const deleteAll = () => {
+    setToDo([]);
+  };
+
   return (
     <div className="App">
       <div className="container">
@@ -45,6 +49,9 @@ function App() {
             }
           >
             {isUpdating ? "Update Task" : "Add Task"}
+          </div>
+          <div className="Deleteall" onClick={deleteAll}>
+            Delete All
           </div>
         </div>
         {/* mapping out the data for rendering  */}

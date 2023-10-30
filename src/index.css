@@ -52,6 +52,13 @@ input{
   cursor: pointer;
 }
 
+.Deleteall{
+  background-color: #8e0642;
+  color: #fff;
+  padding:0.5rem 1.5rem;
+  cursor: pointer;  
+}
+
 .todo{
   position:relative;
   margin-top:1rem;
