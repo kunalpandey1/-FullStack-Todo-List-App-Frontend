@@ -1,7 +1,6 @@
 import axios from "axios";
 
 const baseUrl = "http://localhost:5000/todos";
-//https://fullstack-todo-list-app-backend.onrender.com"
 
 // fetching the TODO from Database
 
