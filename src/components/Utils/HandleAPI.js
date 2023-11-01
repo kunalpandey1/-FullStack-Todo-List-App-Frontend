@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const baseUrl = "http://localhost:5000/todos";
+const baseUrl = "http://localhost:5000";
 
 // fetching the TODO from Database
 
