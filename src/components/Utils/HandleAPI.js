@@ -1,6 +1,7 @@
 import axios from "axios";
 
-const baseUrl = "https://fullstack-todo-list-app-backend.onrender.com";
+const baseUrl = "http://localhost:5000/todos";
+//https://fullstack-todo-list-app-backend.onrender.com"
 
 // fetching the TODO from Database
 
@@ -53,4 +54,14 @@ const deleteTodo = async (todoId, setToDo) => {
   }
 };
 
-export { getAlltodo, addTodo, updateTodo, deleteTodo };
+const deleteAll = async (setToDo) => {
+  try {
+    const response = await axios.post(`${baseUrl}/deleteAll`);
+    console.log(response.data);
+    setToDo([]); // Clear the toDo state after successful deletion
+  } catch (error) {
+    console.error("Error deleting all todos: ", error);
+  }
+};
+
+export { getAlltodo, addTodo, updateTodo, deleteTodo, deleteAll };

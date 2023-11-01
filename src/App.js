@@ -5,6 +5,7 @@ import {
   getAlltodo,
   updateTodo,
   deleteTodo,
+  deleteAll,
 } from "./components/Utils/HandleAPI";
 
 function App() {
@@ -24,8 +25,8 @@ function App() {
     settodoID(_id);
   };
 
-  const deleteAll = () => {
-    setToDo([]);
+  const handleDeleteAll = () => {
+    deleteAll(setToDo);
   };
 
   return (
@@ -50,7 +51,7 @@ function App() {
           >
             {isUpdating ? "Update Task" : "Add Task"}
           </div>
-          <div className="Deleteall" onClick={deleteAll}>
+          <div className="delete-all" onClick={handleDeleteAll}>
             Delete All
           </div>
         </div>
